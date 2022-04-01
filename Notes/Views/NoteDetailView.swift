@@ -54,21 +54,16 @@ struct NoteDetailView: View {
                 if !isEditing{
                     Button("Edit") {
                         isEditing.toggle()
-                        
                     }
                 } else {
                     Button("Done") {
                         isEditing.toggle()
                         noteStore.notes[noteIndex].text = text
-                        
-                        
                     }
                 }
             }
-            
         }
     }
-    
 }
 
 //struct NoteDetailView_Previews: PreviewProvider {

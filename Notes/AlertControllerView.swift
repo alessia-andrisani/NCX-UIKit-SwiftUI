@@ -61,7 +61,7 @@ struct AlertControllerView: UIViewControllerRepresentable {
 			
 			alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel) { _ in
 				
-					//L'ho aggiunta io
+					
 					self.textfieldText = ""
 					
 			})
