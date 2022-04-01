@@ -20,7 +20,6 @@ struct NoteDetailView: View {
         
     }
     
-    
     //TextEditor
     @State private var text = ""
     @FocusState private var isFocused: Bool
@@ -42,7 +41,6 @@ struct NoteDetailView: View {
                     .padding(4)
                 
             }
-            
         }
         .onAppear(perform: {
             text = note.text

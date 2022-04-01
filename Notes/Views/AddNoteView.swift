@@ -10,15 +10,15 @@ import SwiftUI
 struct AddNoteView: View {
     
     @ObservedObject var noteStore: NotesStore
+	
+	@Binding var showingModal: Bool
     
     //TextEditor
     @State private var text = ""
     @FocusState private var isFocused: Bool
     
-    @Binding var showingModal: Bool
     
-    //	@Environment (\.dismiss) var dismiss
-    
+        
     //Alert
     @State private var showingAlert = false
     @State private var textString = ""
