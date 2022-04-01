@@ -11,16 +11,16 @@ struct AlertControllerView: UIViewControllerRepresentable {
 	
 	@ObservedObject var noteStore: NotesStore
 	
-	@Binding var text: String 
+	@Binding var text: String
 	
 	
-	@Binding var textString: String
-	@Binding var showAlert: Bool
+	@Binding var textfieldText: String
+	@Binding var showingAlert: Bool
 	
 	@Binding var showingModal: Bool
 	
-	var title: String
-	var message: String
+	var alertTitle: String
+	var alertMessage: String
 	
 	
 	func makeCoordinator() -> AlertControllerView.Coordinator {
@@ -37,7 +37,7 @@ struct AlertControllerView: UIViewControllerRepresentable {
 		
 
 		func textFieldDidChangeSelection(_ textField: UITextField) {
-			control.textString = textField.text ?? ""
+			control.textfieldText = textField.text ?? ""
 		}
 	}
 	
@@ -47,57 +47,44 @@ struct AlertControllerView: UIViewControllerRepresentable {
 	
 	func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
 		
-		
-		guard context.coordinator.alert == nil else { return }
-		
-		if self.showAlert {
-			let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+		if self.showingAlert {
+			let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
 			context.coordinator.alert = alert
 			
 			
 			alert.addTextField { textField in
 				textField.placeholder = "Enter some text"
-				textField.text = self.textString
+				textField.text = self.textfieldText
 				textField.delegate = context.coordinator
 				
 			}
 			
 			alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel) { _ in
 				
-
-				alert.dismiss(animated: true) {
-					self.showAlert = false
-					
-					
 					//L'ho aggiunta io
-					self.textString = ""
+					self.textfieldText = ""
 					
-				}
 			})
 			
 			alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default) { _ in
 				if let textField = alert.textFields?.first, let text = textField.text {
-					self.textString = text
+					self.textfieldText = text
 					
 					
 				}
 				
-				alert.dismiss(animated: true) {
-					self.showAlert = false
 					showingModal = false
 					
-					let newNote = Note(title: textString, text: text, date: Date.now)
+					let newNote = Note(title: textfieldText, text: text, date: Date.now)
 					
 					noteStore.notes.append(newNote)
 					
-				}
 				
 			})
 			
 			DispatchQueue.main.async {
 				uiViewController.present(alert, animated: true, completion: {
-					self.showAlert = false
-					context.coordinator.alert = nil
+					self.showingAlert = false
 				})
 			}
 			
