@@ -64,8 +64,8 @@ struct NoteDetailView: View {
     }
 }
 
-//struct NoteDetailView_Previews: PreviewProvider {
-//	static var previews: some View {
-//		NoteDetailView(note: Note(title: "", text: "", date: .now))
-//	}
-//}
+struct NoteDetailView_Previews: PreviewProvider {
+	static var previews: some View {
+		NoteDetailView(noteStore: NotesStore(), note: .exampleNote)
+	}
+}

@@ -71,6 +71,6 @@ struct AddNoteView: View {
 
 struct AddNoteView_Previews: PreviewProvider {
     static var previews: some View {
-        AddNoteView(noteStore: NotesStore(), showingModal: .constant(false))
+        AddNoteView(noteStore: NotesStore(), showingModal: .constant(true))
     }
 }
