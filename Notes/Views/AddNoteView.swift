@@ -28,7 +28,7 @@ struct AddNoteView: View {
             
             ZStack {
                 
-                AlertControllerView(noteStore: noteStore, text: $text, textfieldText: $textString, showingAlert: $showingAlert, showingModal: $showingModal, alertTitle: "New Note", alertMessage: "Write a title for this note.")
+				AlertControllerView(noteStore: noteStore, text: $text, showingModal: $showingModal, textfieldText: $textString, showingAlert: $showingAlert, alertTitle: "New Note", alertMessage: "Write a title for this note.")
                 
                 VStack {
                     

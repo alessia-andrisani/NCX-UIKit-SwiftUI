@@ -84,7 +84,10 @@ struct AlertControllerView: UIViewControllerRepresentable {
 			})
 			//
 			
-			// Presents the Alert and dismisses it on completion
+			//To set a color for the buttons in the alert
+			alert.view.tintColor = UIColor.systemOrange
+			
+			// Presents the alert and dismisses it on completion
 			DispatchQueue.main.async {
 				uiViewController.present(alert, animated: true, completion: {
 					self.showingAlert = false
