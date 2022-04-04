@@ -13,5 +13,5 @@ struct Note: Identifiable {
 	var text: String
 	var date: Date
 	
-	static var exampleNote = Note(title: "Example Note", text: "This is an example note for the preview", date: .now)
+	static let exampleNote = Note(title: "Example Note", text: "This is an example note for the preview", date: .now)
 }
