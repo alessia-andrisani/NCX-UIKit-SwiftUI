@@ -40,7 +40,7 @@ struct ContentView: View {
                                 }.padding(.bottom, 0.5)
                                 Text(note.text)
                                     .font(.subheadline)
-                                    .lineLimit(2)
+                                    .lineLimit(1)
                                     .frame(maxHeight: .infinity)
                                 
                             }.padding(.vertical, 4)
@@ -56,11 +56,9 @@ struct ContentView: View {
                     Button {
                         showModal = true
                         
-                        
                     } label: {
                         Image(systemName: "plus")
                     }
-                    
                 }
             }
             .navigationTitle("Notes")
