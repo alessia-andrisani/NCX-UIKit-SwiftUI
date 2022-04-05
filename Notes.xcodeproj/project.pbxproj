@@ -67,7 +67,7 @@
 				506D07A227F59795003ECB38 /* Extensions.swift */,
 				506D079E27F595B5003ECB38 /* Model */,
 				506D079F27F595BD003ECB38 /* Views */,
-				506D079A27F594B8003ECB38 /* AlertControllerView.swift */,
+				50E5CBA427FC919E00E48138 /* AlertWithTextField */,
 				506D079027F59480003ECB38 /* Assets.xcassets */,
 				506D079227F59480003ECB38 /* Preview Content */,
 			);
@@ -99,6 +99,14 @@
 				506D07A627F5AACE003ECB38 /* NoteDetailView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		50E5CBA427FC919E00E48138 /* AlertWithTextField */ = {
+			isa = PBXGroup;
+			children = (
+				506D079A27F594B8003ECB38 /* AlertControllerView.swift */,
+			);
+			path = AlertWithTextField;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
