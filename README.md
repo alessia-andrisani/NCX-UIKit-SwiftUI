@@ -1,4 +1,4 @@
-# Notes App - How to embed an Alert with Textfield in SwiftUI 
+# Notes App - How to embed an Alert with TextField in SwiftUI 
 
 ###### Created at Apple Developer Academy, Napoli. 
 
@@ -13,10 +13,12 @@ SwiftUI
 
 *** 
 
-Unfortunately, there are still many components that only exist in `UIKit` and others that are not customizable in `SwiftUI` as much as in UIKit and the `Alert with TextField` is among them. You may be tempted to create these kinds of views custom directly in SwiftUI but you’ll soon realize that the result will never be exactly like the original and you will lose some functionalities that the native ones provide you for free. That's why we decided to create this app that let's you create notes, give a name (using an alert from UIKit) and message and also edit them. 
+Unfortunately, there are still many components that only exist in `UIKit` and others that are not customizable in `SwiftUI` as much as in UIKit and the `Alert with TextField` is among them. You may be tempted to create these kinds of views custom directly in SwiftUI but you’ll soon realize that the result will never be exactly like the original and you will lose some functionalities that the native ones provide you for free. 
+
+That's why we decided to develop `this app that lets you create notes`, give them a name (using an alert from UIKit) and also edit them. 
 
 
-This simple iOS app makes use of the `UIViewControllerRepresentable` protocol to create and manage a UIKit View Controller object into a SwiftUI interface. If you want to learn more about this protocol and about an alert with textField, read us on [Medium](https://medium.com/codex/how-to-embed-a-uikit-alert-with-text-field-in-swiftui-8547afaa1fc). 
+This simple iOS app makes use of the `UIViewControllerRepresentable` protocol to create and manage a UIKit View Controller object into a SwiftUI interface. If you want to learn more about this protocol and about an alert with TextField, read us on [Medium](https://medium.com/codex/how-to-embed-a-uikit-alert-with-text-field-in-swiftui-8547afaa1fc). 
 
 
 <img width="417" alt="Screen Shot 2022-04-05 at 16 56 35" src="https://user-images.githubusercontent.com/62070103/161783155-32b50b2b-ac8f-4d69-82a2-b7d2c182830f.png">
