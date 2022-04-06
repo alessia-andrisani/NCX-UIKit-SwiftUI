@@ -7,10 +7,13 @@
 
 import SwiftUI
 
+// In this view we create a new Note object
 struct AddNoteView: View {
     
+	// We access the StateObject created in ContentView
     @ObservedObject var noteStore: NotesStore
 	
+	//Binding to read and update the value in ContentView
 	@Binding var showingModal: Bool
     
     //TextEditor
@@ -54,7 +57,8 @@ struct AddNoteView: View {
                         showingAlert = true
                         
                         
-                    }.disabled(text.isEmpty)
+                    } //The done button will be disabled if the text is empty
+					.disabled(text.isEmpty)
                 }
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button("Cancel", role: .destructive) {

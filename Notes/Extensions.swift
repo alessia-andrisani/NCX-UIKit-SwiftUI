@@ -7,6 +7,9 @@
 
 import Foundation
 
+
+// Formats a date in String in order to display it in ContentView
+
 extension Date {
 	var formattedDateInString: String {
 		let dateFormatter = DateFormatter()

@@ -7,14 +7,19 @@
 
 import SwiftUI
 
+//This is the main View of the App
+
 struct ContentView: View {
     
+	//Creates an instance of NotesStore with the array of notes inside
     @StateObject var notesStore = NotesStore()
     
+	// Tracks whether we're showing AddNoteView or not
     @State private var showModal = false
     var body: some View {
         NavigationView {
             
+			//Create the list from the array in notesStore
             List {
                 
                 Section {
@@ -63,11 +68,12 @@ struct ContentView: View {
             }
             .navigationTitle("Notes")
         }
-        
+        //Shows AddNoteView
         .sheet(isPresented: $showModal) {
             AddNoteView(noteStore: notesStore, showingModal: $showModal)
         }
     }
+	//Function to delete the notes from the list
     func deleteNote( at offsets: IndexSet) {
         notesStore.notes.remove(atOffsets: offsets)
     }
