@@ -28,7 +28,7 @@ struct ContentView: View {
                         ZStack{
                             NavigationLink { NoteDetailView(noteStore: notesStore, note: note) } label: {
                                 EmptyView()
-                            }.opacity(0)
+                            }.opacity(0)   //To hide the > symbol of Navigation Link
                             
                             VStack(alignment: .leading) {
                                 HStack {

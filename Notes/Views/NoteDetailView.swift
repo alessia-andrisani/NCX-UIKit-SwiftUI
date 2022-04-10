@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// In this view we show the details of a note and we can modify it
 struct NoteDetailView: View {
     
     @ObservedObject var noteStore: NotesStore
