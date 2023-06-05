@@ -1,5 +1,8 @@
 # Notes App - How to embed an Alert with TextField in SwiftUI 
 
+[![](https://img.shields.io/badge/iOS-15.4-orange)](#)
+[![](https://img.shields.io/badge/Platforms-iPhone-blue)](#)
+[![](https://img.shields.io/badge/Category-Productivity-brightgreen)](#)
 
 ## Framework used: 
 SwiftUI
